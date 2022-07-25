@@ -30,7 +30,7 @@ For an example, see [ExampleAlgorithm](https://github.com/mosaicml/experimental/
 To use experimental in your code, simply import the library and use with your trainer:
 
 ```python
-from experimental.algorithms import ExampleAlgorithm
+from experimental.algorithms.example_algorithm import ExampleAlgorithm
 from composer import Trainer
 
 trainer = Trainer(
@@ -46,7 +46,7 @@ config management library.
 import experimental
 from composer.trainer import TrainerHparams
 
-experimental.algorithms.register_all_algorithms()
+experimental.register_all_algorithms()
 trainer = TrainerHparams.create(f="my_yaml_file.yaml")
 trainer.fit()
 ```
