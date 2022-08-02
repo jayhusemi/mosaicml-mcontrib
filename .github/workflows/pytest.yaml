@@ -25,7 +25,7 @@ jobs:
         run: |
           set -ex
           python -m pip install --upgrade pip wheel
-          python -m pip install -e .
+          python -m pip install -e .[dev]
       - name: Run Tests
         id: tests
         run: |

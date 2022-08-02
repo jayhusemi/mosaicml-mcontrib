@@ -20,20 +20,21 @@ data_files = package_files("experimental", "algorithms", ".json")
 
 install_requires = [
     "mosaicml>=0.8.0",
-    "pytest==7.1.0",
-    "toml==0.10.2",
-    "yapf==0.32.0",
-    "isort==5.10.1",
-    "ipython==7.32.0",
-    "ipykernel==6.9.2",
-    "jupyter==1.0.0",
-    "yamllint==1.26.3",
-    "docformatter==1.4",
 ]
+
+extra_deps = {
+    'dev': [
+        "pytest==7.1.0",
+        "toml==0.10.2",
+        "yapf==0.32.0",
+        "isort==5.10.1",
+        "yamllint==1.26.3",
+    ]
+}
 
 setup(
     name="mosaicml-experimental",
-    version="0.0.1",
+    version="0.0.2",
     author="MosaicML",
     author_email="team@mosaicml.com",
     description="Experimental and third-party algorithms",
@@ -50,5 +51,6 @@ setup(
         "Programming Language :: Python :: 3.9",
     ],
     install_requires=install_requires,
+    extras_require=extra_deps,
     python_requires=">=3.7",
 )

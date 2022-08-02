@@ -14,10 +14,11 @@ def is_algorithm_folder(f: os.DirEntry) -> bool:
 
 
 def register_all_algorithms() -> List[str]:
-    """Registers every algorithm in the folder with the trainer hparams using the associated metadata.
+    """Registers every algorithm in the folder with the trainer hparams using
+    the associated metadata.
 
-    Assumes that the algorithm has docstrings that can be used to auto-generated an hparams class.
-
+    Assumes that the algorithm has docstrings that can be used to auto-
+    generated an hparams class.
     """
 
     root_folder = os.path.split(__file__)[0]
