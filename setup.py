@@ -16,7 +16,7 @@ def package_files(prefix: str, directory: str, extension: str):
     return paths
 
 
-data_files = package_files("experimental", "algorithms", ".json")
+data_files = package_files("mcontrib", "algorithms", ".json")
 
 install_requires = [
     "mosaicml>=0.8.0",
@@ -33,15 +33,15 @@ extra_deps = {
 }
 
 setup(
-    name="mosaicml-experimental",
+    name="mcontrib",
     version="0.0.2",
     author="MosaicML",
     author_email="team@mosaicml.com",
-    description="Experimental and third-party algorithms",
-    url="https://github.com/mosaicml/experimental",
+    description="mosaicml contrib of third-party algorithms",
+    url="https://github.com/mosaicml/mcontrib",
     include_package_data=True,
     package_data={
-        "experimental": data_files,
+        "mcontrib": data_files,
     },
     packages=setuptools.find_packages(exclude=["tests*"]),
     classifiers=[

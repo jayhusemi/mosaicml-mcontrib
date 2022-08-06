@@ -1,4 +1,4 @@
-name: experimental-install
+name: mcontrib-install
 on:
   push:
     branches:
@@ -10,7 +10,7 @@ on:
       - release/*
   workflow_dispatch: {}
 jobs:
-  experimental-Pip-Install:
+  mcontrib-Pip-Install:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     strategy:
@@ -44,4 +44,4 @@ jobs:
         id: tests
         run: |
           set -exuo pipefail
-          python -c "import experimental"
+          python -c "import mcontrib"

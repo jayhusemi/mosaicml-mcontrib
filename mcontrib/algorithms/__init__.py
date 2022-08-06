@@ -32,7 +32,7 @@ def register_all_algorithms() -> List[str]:
 
         # retrieve the class name from the metadata.json
         # this should be importable with
-        # from experimental.algorithms.{algorithm_name} import {class_name}
+        # from mcontrib.algorithms.{algorithm_name} import {class_name}
         metadata_path = os.path.join(folder, 'metadata.json')
         if not os.path.isfile(metadata_path):
             raise FileNotFoundError(f"{metadata_path} does not exist")
@@ -43,7 +43,7 @@ def register_all_algorithms() -> List[str]:
 
         # import the algorithm class and add to the algorithm registry
         cls = getattr(
-            importlib.import_module(name=f"experimental.algorithms.{algorithm_name}"),
+            importlib.import_module(name=f"mcontrib.algorithms.{algorithm_name}"),
             class_name,
         )
 

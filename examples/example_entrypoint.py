@@ -21,7 +21,7 @@ from composer.loggers import LogLevel
 from composer.trainer.trainer_hparams import TrainerHparams
 from composer.utils import dist
 
-import experimental
+import mcontrib
 
 
 def _warning_on_one_line(message, category, filename, lineno, file=None, line=None):
@@ -40,7 +40,7 @@ def main():
         format=f'%(asctime)s: rank{global_rank}[%(process)d][%(threadName)s]: %(levelname)s: %(name)s: %(message)s')
 
     # register all algorithms
-    experimental.register_all_algorithms()
+    mcontrib.register_all_algorithms()
 
     warnings.formatwarning = _warning_on_one_line
 
